@@ -1,0 +1,12 @@
+<html>
+    <body onload="callMynewsdeskScript()">
+        <script>
+            document.domain = /([a-z0-9-]+\.((co|org|gov)\.\w{2}|\w+))$/i.exec(location.hostname)[0];
+
+            function callMynewsdeskScript(){
+                window.parent.parent.mynewsdeskHandleLocation(window.location);
+            }
+        </script>
+    </body>
+</html>
+

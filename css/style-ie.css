@@ -1,0 +1,183 @@
+/* ==========================================.
+   STYLES FOR IE >9 */
+
+/* FOOTER LOGO */
+.oa-footer-logo{
+	background: url(img/black_oa_logo.png) top left no-repeat;
+	width: 34px;
+	height: 17px;
+	margin: 0 auto;
+	background-size: cover;
+}
+
+@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+	.oa-footer-logo{
+		background: url(img/black_oa_logo_@2x.png) top left no-repeat;
+	}
+}
+
+/* Possible hack for PNG IE6 transparency */
+.png_hack {
+	background-image: url('img/the_image.png') !important;
+	background-image: none;
+	filter: none !important;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=’img/the_image.png’); }
+
+
+/* Because #content-container won't stick */
+#content-container p {
+	margin-bottom: 16px; 
+	line-height: 150%; }
+
+#content-container ul, #content-container ol {
+	margin: 0 40px 16px 40px; }
+
+#content-container ul li, #content-container ol li {
+	margin: 6px 0; }
+
+#content-container ul li { list-style: square; }
+
+#content-container ol li { list-style: decimal; }
+
+h1.post-title {
+	margin-bottom: 24px;
+	font-size: 225%; }
+
+#content-container h1, #content-container h2 {
+	margin-bottom: 12px;
+	font-size: 175%; }
+
+#content-container h3 {
+	margin-top: 36px;
+	margin-bottom: 12px;
+	font-size: 150%; }
+	
+#content-container h4 {
+	margin-top: 24px;
+	margin-bottom: 6px;
+	font-size: 125%;
+	font-weight: bold; }
+
+#content-container h5 {
+	margin-bottom: 6px; 
+	font-size: 112.5%; 
+	font-weight: bold; }
+
+#content-container h6 {
+	margin-bottom: 6px;
+	font-size: 100%;
+	font-weight: bold; }
+
+#content-container p {
+	margin-bottom: 24px; 
+	line-height: 150%; }
+	
+.sponsors-area{
+	float:left;
+}	
+
+
+/* From 960 px media query */
+
+	#outer-wrap, #header-container .wrapper  {
+		width: 960px; 
+	}
+
+	#branches-container ul, #news-container ul, #footer-container .wrapper {
+		width: 990px;
+	}
+
+	#header-container .wrapper, #footer-container .wrapper, #branches-container ul, #news-container ul {
+		margin: 0 auto;
+	}
+
+	#branches-container {
+		margin: 60px 0;
+		padding-bottom: 60px;
+		border-bottom: 1px solid #e4e4e4;
+	}
+
+	#news-container {
+		margin-bottom: 60px;
+	}
+
+	.footer-column {
+		width: 45%;
+	}
+
+	#site-nav-footer {
+		/*margin-top: 60px;*/
+	}
+
+	li.branch, div.branch {
+		font-size: 18px;
+		text-align: center;
+	}
+
+	li.branch p, li.branch h3, div.branch p, div.branch h3 {
+		padding: 0 15px;
+	}
+
+	div.branch-image {
+		margin: 0 auto 30px auto;
+		min-height: 76px;
+	}
+
+	#branch-1 img {
+		margin-top: 1px;
+	}
+
+	#branch-2 img {
+		margin-top: 9px;
+		margin-bottom: 9px;
+	}
+
+	#branch-3 img {}
+	
+	#sidebar-container {
+		float: left;
+		width: 300px; }
+	
+	#main-container { 
+		margin: 45px 0 60px 0; 
+	}
+
+	#content-container {
+		float: right; 
+		width: 630px; }
+
+	/* Typography */
+	#home-header h1, h1.page-title {
+		font-weight: 600;
+		font-size: 50px;
+		line-height: 125%;
+	}
+
+	h1.page-title {
+		text-align: left;
+		font-size: 25px;
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	h1.page-title span{
+		font-weight: 300;
+	}
+
+	#home-header h2, h2.page-description {
+		font-size: 30px;
+		font-weight: 200;
+		line-height: 125%;
+	}
+
+	h3.branch-heading {
+		font-size: 28px;
+		font-weight: 600;
+		margin-bottom: 30px;
+	}
+
+	p.branch-description {
+		font-size: 18px;
+		line-height: 150%;
+		color: #333;
+	}

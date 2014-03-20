@@ -1,0 +1,966 @@
+/*  
+	Theme Name: Digitaliseringskommissionen
+	Description: Theme developed for Digitaliseringskommitionen by Odd Alice.
+	Version: 0.3
+	Author: Odd Alice
+	Author URI: http://oddalice.se
+*/
+
+/* ==========================================.
+   TOC 
+   
+   01. Reset
+   02. Base
+   03. Links
+   04. Typography
+   05. Lists
+   06. Embeds and figures
+   07. Forms
+   08. Tables
+   09. Helper classes
+   10. Media queries
+   11. Print
+   
+   */
+
+
+/* ==========================================.
+   01. RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block; }
+
+audio[controls], canvas, video { 
+	display: inline-block;
+	zoom: 1; } /* From HTML5 Boilerplate */
+	
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none; }
+	
+table {
+	border-collapse: collapse;
+	border-spacing: 0; }
+
+
+/* ==========================================.
+   02. BASE */
+
+::-moz-selection { 
+	background: #feae0b; 
+	color: #fff; 
+	text-shadow: none; }
+
+::selection { 
+	background: #feae0b; 
+	color: #fff; 
+	text-shadow: none; }
+	
+:focus {
+	/*outline: -webkit-focus-ring-color auto 5px;*/
+	outline-size: 5px;
+	outline-style: solid;
+	outline-color: #5b9dd9;
+}	
+
+#outer-wrap {
+	margin: 0 auto; }
+
+#header-container, #main-container, #sidebar-container, #footer-container, #footer-copy { 
+	float: left; 
+	width: 100%; 
+}
+
+#sidebar-container ul li ul li{
+	padding: 15px 0;
+	border-top: 1px solid #E4E4E4;
+	margin: 0;
+}
+
+#sidebar-container ul.children{
+	padding: 20px 0 0 10px;
+}
+
+#sidebar-container .menu a{
+	font-size: 16px;
+}
+
+#sidebar-container .left-nav-link{
+	margin-bottom: 30px;
+}
+
+#header-container {
+	margin: 30px 0;
+}
+
+.breadcrumb{
+	width: 100%;
+	margin: 20px 0;
+	font-size: 80%;
+}
+
+#site-title {
+	width: 350px;
+	float: left;
+}
+
+#site-nav {
+	float: right;
+}
+
+#site-nav li { 
+    float: left;
+    margin-left: 20px;
+    font-weight: 500;
+    line-height: 41px;
+}
+
+#home-header, .page-header {
+	width: 100%;
+	float: left;
+	background-color: #0073C1;
+	padding: 60px 0;
+	color: #fff;
+	text-align: center;
+}
+
+.page-header {
+	padding: 30px 0;
+}
+
+#branches-container, #news-container {
+	width: 100%;
+	float: left;
+}
+
+li.post-home, li.branch, div.branch {
+	float: left;
+	width: 33.3%;
+}
+
+li.post-home article {
+	padding: 0 15px;
+}
+
+li.more-news {
+	float: right;
+	width: 100%;
+	margin-top: 15px;
+	text-align: right;
+	font-weight: 600;
+}
+
+body.archive article, body.search article {
+	margin-bottom: 35px;
+	padding-bottom: 35px;
+	border-bottom: 1px solid #E4E4E4;
+}
+
+.nav-previous {
+	float: left;
+	width: 45%;
+}
+
+.nav-next {
+	float: right;
+	width: 45%;
+	text-align: right;
+}
+
+#comments {
+	float: left;
+	width: 100%;
+	clear: both;
+	margin-top: 30px;
+}
+
+.comment-author img{
+	vertical-align: middle;
+}
+
+#footer-container {
+	padding: 40px 0;
+	background-color: #333;
+	color: #fff;
+}
+
+.footer-column {
+	float: left;
+	width: 100%;
+}
+
+#sidebar-container { 
+	float: right; }
+
+#sidebar-widgets li.widget-container {
+	margin-bottom: 30px; 
+}
+
+li.widget-container ul li {
+	margin: 7px 0;
+}
+
+#site-nav-footer {
+	width: 100%;
+}
+
+#site-nav-footer li {
+	float: left;
+	margin-left: 15px;
+	text-align: right;
+	line-height: 24px;
+}
+
+#footer-copy {
+	margin-top: 20px;
+	padding-bottom: 40px;
+	text-align: center; 
+	display: none;
+}
+
+#nav-single, .navigation,
+.entry-meta, .page-link {
+	float: left;
+	width: 100%;
+	clear: both; }
+
+/* Mobile menu styling and positioning */
+#site-mobile-nav{ position:relative; }
+#site-mobile-nav li{ 
+	display: block; 
+	padding: 20px 30px; }
+#site-mobile-nav .menu-toppmeny{ 
+	width: 80%; 
+	margin: 0 auto;}
+.oa-mobile-menu .menu{ 
+	margin-top: -1000px; 
+	background: #fff; 
+	position: absolute; 
+	width: 100%;
+	display: none;
+}
+	
+/* Mobile menu trigger styling */
+#site-nav-mobile{ display: none; float:right; }
+#site-nav-mobile li{ 
+	float: left;
+	margin-left: 20px;
+	font-weight: 500;
+	line-height: 41px; }
+
+#searchform{}
+
+#searchform label{
+	display: block;
+	line-height: 26px;
+	font-weight: 600;
+	display: none;
+}
+
+#searchform input{ 
+	height: 40px;
+	line-height: 20px;
+	padding: 0 15px;
+	-webkit-appearance: none;
+	border-style: none;
+	font-size: 14px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-moz-border-radius: 3px;
+	margin: 0 5px 0 0;
+}
+
+#searchform input[type=text]{
+	font-weight: 300;
+	border: 1px solid #979797;
+	height: 38px;
+	width: 200px;
+	box-shadow: inset 0 1px 2px #aaa;
+	-webkit-box-shadow: inset 0 1px 2px #aaa;
+	-ms-box-shadow: inset 0 1px 2px #aaa;
+	-moz-box-shadow: inset 0 1px 2px #aaa;
+}
+#searchform input[type=submit]{
+	background: #0073C1;
+	color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+	margin: 0;
+}
+
+
+
+.featured-archive{
+	float: left;
+	width: 22%;
+	overflow: hidden;
+	margin-right: 4%;
+}
+.featured{
+	width: 100%;
+	margin-bottom: 30px;
+}
+.featured img, .featured-archive img{
+	width: 100%;
+	height: auto;
+}
+
+.twitter{
+	background: url(img/twitter_logo_15.png) left center no-repeat;
+	vertical-align: middle;
+	height: 21px;
+	padding-left: 21px;
+}
+.facebook{
+	background: url(img/fb_logo_15.png) left center no-repeat;
+	vertical-align: middle;
+	height: 21px;
+	padding-left: 21px;	
+}
+
+/* ==========================================.
+   03. LINKS */
+
+a:link, a:active, a:visited {
+	color: #0073C1;
+}
+
+h1 a, h2 a, h3 a, h4 a, a h1, a h2, a h3, a h4{
+	text-decoration: none;
+}
+
+nav a:link, nav a:active, nav a:visited, .menu a:link, .menu a:active, .menu a:visited {
+	text-decoration: none;
+}
+
+#sidebar-container .menu .current-menu-item a:link, #sidebar-container .menu .current-menu-item a:visited, #sidebar-container .menu .current-menu-item a:active, #site-nav li.current-menu-item a{
+	color: #000;
+	font-weight: 600;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+#footer-container a {
+	color: #fff;
+}
+
+#footer-container a:hover {
+	text-decoration: underline;
+}
+
+.previous-link{
+	float:left;
+	margin-right: 10px;
+}
+.next-link{
+	float:right;
+	margin-left: 10px;
+}
+
+#cookie form{
+	float: left;
+	width: 100%;
+	background: #f7f5c8;
+	padding: 0 0 10px 0;
+	margin: 0 0 10px 0;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	font-size: 13px;
+	text-align: center;
+}
+#cookie form p{
+	padding: 10px;
+	margin: 0 auto;
+	width: 90%;
+	max-width: 960px;
+}
+/* ==========================================.
+   04. TYPOGRAPHY */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 0 40px; }
+
+dfn { font-style: italic; }
+
+hr { 
+	display: block; 
+	height: 1px; 
+	border: 0; 
+	border-top: 1px solid #ccc; 
+	margin: 20px 0; 
+	padding: 0; }
+
+ins { 
+	background: #ff9; 
+	color: #000; 
+	text-decoration: none; }
+
+mark { 
+	background: #ff0; 
+	color: #000; 
+	font-style: italic; 
+	font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { 
+	font-family: monospace, monospace;
+	_font-family: 'courier new', monospace; 
+	font-size: 100%; }
+
+pre { 
+	white-space: pre; 
+	white-space: pre-wrap; 
+	word-wrap: break-word; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { 
+	font-size: 75%; 
+	line-height: 0; 
+	position: relative; 
+	vertical-align: baseline; }
+	
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+	font-weight: 600;
+}
+
+h1.post-title {
+	margin-bottom: 24px;
+	font-size: 225%; 
+}
+
+article h1, article h2 {
+	margin-bottom: 12px;
+	font-size: 130%; 
+	line-height: 27px;
+}
+
+article h2{
+	font-size: 125%;
+}
+
+article h3 {
+	margin-top: 36px;
+	margin-bottom: 12px;
+	font-size: 120%; }
+	
+article h3.entry-title-home {
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 0;
+	margin-bottom: 10px;
+	line-height: 23px;
+}
+
+article h4 {
+	margin-top: 24px;
+	margin-bottom: 6px;
+	font-size: 115%;
+	font-weight: bold; }
+
+article h5 {
+	margin-bottom: 6px; 
+	font-size: 112.5%; 
+	font-weight: bold; }
+
+article h6 {
+	margin-bottom: 6px;
+	font-size: 100%;
+	font-weight: bold; }
+
+article p {
+	margin-bottom: 24px; 
+	line-height: 160%;
+	color: #121212;
+}
+
+article .date{
+	display: block;
+	color: #999;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+p.post-meta, p.post-meta-home {
+	color: #777;
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+h3.meta-name {
+	margin: 0;
+	padding-top: 6px;
+	color: #777;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+h3.meta-name span {
+	text-transform: uppercase;
+}
+
+.entry-summary p {
+	font-size: 14px;
+	margin: 0;
+}
+
+.footer-column p {
+	margin: 30px 0;
+	font-size: 13px;
+	line-height: 150%;
+	color: #efefef;
+}
+
+#site-nav-footer li {
+	font-size: 13px;
+	font-weight: 600;
+}
+
+#sidebar-container {
+	font-size: 85%;
+}
+
+.widget-title {
+	margin-bottom: 10px; 
+	font-size: 125%;
+	font-weight: 600;
+}
+
+.widget_text .widget-title {
+	margin-bottom: 0;
+}
+
+.widget-container {
+	line-height: 135%;
+}
+
+.textwidget p {
+	color: #333;
+	margin-top: 10px;
+	line-height: 150%;
+}
+
+.calendar{
+
+}
+
+.calendar-header-date{
+	border-bottom: 1px solid #E4E4E4;
+	width: auto;
+	margin: 0 0 10px 0;
+	font-size: 20px;
+	line-height: 150%;
+	font-family: sans-serif;
+	font-weight: 600;
+	color: #333;
+}
+
+.calendar-date-column {
+	width: 10%;
+	float: left;
+	padding: 15px 0;
+	margin: 0 2.5%;
+	text-align: center;
+}
+
+.calendar-date-column h2{
+	font-size: 35px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+
+/* ==========================================.
+   05. LISTS */
+
+article ul, article ol {
+	margin: 0 40px 24px 40px; }
+
+article ul li, article ol li {
+	margin: 15px 0; 
+	line-height: 160%;
+}
+
+article ul li { list-style: square; }
+
+article ol li { list-style: decimal; }
+
+
+/* ==========================================.
+   06. EMBEDS AND FIGURES */
+
+.entry-content img {
+	max-width: 100%; 
+	height: auto; }
+
+.wp-caption {
+    background: #fff;
+    max-width: 100%;
+    padding: 0;
+    text-align: center; }
+
+.wp-caption.alignnone {
+    margin: 0 20px 20px 0; }
+
+.wp-caption.alignleft {
+    margin: 0 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 0 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin:0;
+    max-width: 98.5%;
+    padding:0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size:11px;
+    line-height:17px;
+    margin:0;
+    padding:0 4px 5px;
+}
+
+
+/* ==========================================.
+   07. FORMS */
+
+/* ==========================================.
+   08. TABLES */
+
+/* ==========================================.
+   09. HELPER CLASSES */
+
+.alignnone {
+    margin: 5px 0 20px 0; }
+
+.aligncenter, div.aligncenter {
+    display: block;
+    margin: 5px auto 20px auto; }
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px; }
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0; }
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 20px auto; }
+
+.right-column {
+	float: right;
+}
+
+.left-column {
+	float: left;
+}
+
+
+/* ==========================================.
+   10. MEDIA QUERIES */
+
+/* Under 590 px */
+/* @media only screen and (max-width: 480px) { */
+@media only screen and (max-width: 959px) {
+	
+	.wrapper {
+		float: left;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	#header-container .wrapper {
+		float: none;
+		padding: 0;
+	}
+
+	img.alignleft, img.alignright {
+		max-width: 35%;
+		height: auto; 
+	}
+
+	#site-title {
+		width: 270px;
+		margin-left: 15px;
+	}
+
+	img.logo {
+		width: 270px;
+		height: auto;
+	}
+
+	#site-nav, .entry-summary { 
+		display: none; 
+	}
+	
+	#sidebar-container{
+		padding-top: 30px;
+		width: 100%;
+		overflow: hidden;
+	}
+	
+	#site-nav-mobile { 
+		display: block;
+		margin-right: 15px;
+		text-align: right;
+	}
+
+	#site-nav-footer li {
+		float: left;
+		width: 100%;
+		margin: 15px 0;
+		text-align: center;
+	}
+
+	#branches-container {
+		margin-top: 30px;
+	}
+
+	li.branch, li.post-home, div.branch {
+		width: 100%;
+		float: left;
+	}
+
+	li.branch, div.branch {
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #0073C1;
+	}
+
+	li.branch img, div.branch img {
+		float: left;
+		margin-right: 15px;
+		height: 28px;
+		width: auto;
+	}
+
+	#news-container {
+		margin-bottom: 30px;
+	}
+
+	li.more-news {
+		padding-right: 15px;
+	}
+
+	#main-container { 
+		margin: 30px 0; 
+	}
+
+	/* Typography */
+	#home-header h1, h1.page-title {
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 125%;
+	}
+
+	h1.page-title {
+		text-align: left;
+		font-size: 22px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	h2.entry-title  {
+		font-size: 22px;
+	}
+
+	#home-header h2, h2.page-description {
+		margin-top: 30px;
+		font-size: 22px;
+		font-weight: 200;
+		line-height: 125%;
+	}
+
+	h2.branch-heading{
+		font-size: 28px;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+	h2.branch-heading, h3.branch-heading {
+		font-size: 28px;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+
+	p.branch-description {
+		font-size: 18px;
+		line-height: 150%;
+		color: #333;
+	}
+
+	.footer-column {
+		text-align: center;
+	}
+	
+	.breadcrumb{
+		display: none;
+	}
+
+}
+
+/* 960 px and up */
+@media only screen and (min-width: 960px) {
+
+	#outer-wrap, #header-container .wrapper, #cookie.wrapper  {
+		width: 960px; 
+	}
+
+	#branches-container ul, #news-container ul, #footer-container .wrapper {
+		width: 990px;
+	}
+
+	#header-container .wrapper, #footer-container .wrapper, #branches-container ul, #news-container ul, #cookie.wrapper {
+		margin: 0 auto;
+	}
+
+	#branches-container {
+		margin: 60px 0;
+		padding-bottom: 60px;
+		border-bottom: 1px solid #e4e4e4;
+	}
+
+	#news-container {
+		margin-bottom: 60px;
+	}
+
+	.footer-column {
+		width: 45%;
+	}
+
+	#site-nav-footer {
+		/*margin-top: 60px;*/
+	}
+
+	li.branch, div.branch {
+		font-size: 18px;
+		text-align: center;
+	}
+
+	li.branch p, li.branch h3, div.branch p, div.branch h3 {
+		padding: 0 15px;
+	}
+
+	div.branch-image {
+		margin: 0 auto 30px auto;
+		min-height: 76px;
+	}
+
+	#branch-1 img {
+		margin-top: 1px;
+	}
+
+	#branch-2 img {
+		margin-top: 9px;
+		margin-bottom: 9px;
+	}
+
+	#branch-3 img {}
+	
+	#sidebar-container {
+		float: left;
+		width: 300px; }
+	
+	#main-container { 
+		margin: 0 0 60px 0; 
+	}
+
+	#content-container {
+		float: right; 
+		width: 630px; }
+
+	/* Typography */
+	#home-header h1, h1.page-title {
+		font-weight: 600;
+		font-size: 50px;
+		line-height: 125%;
+	}
+
+	h1.page-title {
+		text-align: left;
+		font-size: 25px;
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	h1.page-title span{
+		font-weight: 300;
+	}
+
+	#home-header h2, h2.page-description {
+		font-size: 30px;
+		font-weight: 200;
+		line-height: 125%;
+	}
+
+	h2.branch-heading, h3.branch-heading {
+		font-size: 28px;
+		font-weight: 600;
+		margin-bottom: 30px;
+	}
+
+	p.branch-description {
+		font-size: 18px;
+		line-height: 150%;
+		color: #333;
+	}
+
+}
+
+
+/* ==========================================.
+   11. PRINT */

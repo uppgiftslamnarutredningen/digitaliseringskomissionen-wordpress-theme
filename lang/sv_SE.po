@@ -1,0 +1,268 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: oacore\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-29 11:37+0100\n"
+"PO-Revision-Date: 2013-11-29 11:39+0100\n"
+"Last-Translator: Thord Daniel Hedengren <tdh@tdh.me>\n"
+"Language-Team: Odd Alice <hi@oddalice.com>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:6 404.php:21
+msgid "There&rsquo;s Nothing Here"
+msgstr "Det finns ingenting h&auml;r"
+
+#: 404.php:24
+msgid ""
+"Sorry, but we can&rsquo;t seem to find what you&rsquo;re looking for. "
+"That&rsquo;s a shame, it was probably something awesome. Do try and search "
+"for it, will you?"
+msgstr ""
+"Vi beklagar, men vi kan inte hitta vad du letade efter. Det &auml;r "
+"verkligen tr&aring;kigt eftersom det antagligen var n&aring;got riktigt "
+"intressant. Vad s&auml;gs om att f&ouml;rs&ouml;ka s&ouml;ka r&aruml;tt "
+"p&aring; det?"
+
+#: archive-calendar.php:8 single-calendar.php:7
+msgid "Kalendarium"
+msgstr "Kalendarium"
+
+#: archive-reports.php:7
+msgid "Rapporter"
+msgstr "Rapporter"
+
+#: archive.php:9
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Dagsarkiv: %s"
+
+#: archive.php:13
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "M&aring;nadsarkiv: %s"
+
+#: archive.php:17
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "&Aring;rsarkiv: %s"
+
+#: archive.php:22 archive.php:27 archive.php:32
+msgid "<span>"
+msgstr "<span>"
+
+#: archive.php:36
+msgid "Archives"
+msgstr "Arkiv"
+
+#: author.php:18
+#, php-format
+msgid "Author Archives: %s"
+msgstr "F&ouml;rfattararkiv: %s"
+
+#: comments.php:6
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+"Den h&auml;r poster &auml;r l&ouml;senordsskyddad. Fyll i l&ouml;senordet "
+"f&ouml;r att f&aring; se kommentarerna."
+
+#: comments.php:18
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: comments.php:29 comments.php:49
+msgid "<span class=\"meta-nav\">&larr;</span> Older comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> &Auml;ldre kommentarer"
+
+#: comments.php:32 comments.php:52
+msgid "Newer comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyare kommentarer <span class=\"meta-nav\">&rarr;</span>"
+
+#: comments.php:64
+msgid "Sorry, comments are closed."
+msgstr "Vi beklagar, men kommentarsfunktionen &auml;r avst&auml;ngd."
+
+#: content-page.php:10 content-single.php:12 content.php:32
+msgid "Pages:"
+msgstr "Sidor: "
+
+#: content-single.php:18
+msgid "Tagged with "
+msgstr "Taggad med "
+
+#: content-single.php:21
+msgid "Written by"
+msgstr "Skrivet av"
+
+#: functions.php:15
+msgid "Main Menu"
+msgstr "Huvudmeny"
+
+#: functions.php:62
+msgid "Primary Right Column"
+msgstr "Huvudsaklig h&ouml;gerkolumn"
+
+#: functions.php:64
+msgid "The primary right column."
+msgstr "Den huvudsakliga h&ouml;gerkolumnen."
+
+#: functions.php:73
+msgid "Press Right Column"
+msgstr "H&ouml;gerkolumn f&ouml;r Press"
+
+#: functions.php:75
+msgid "When the category is Press, this sidesbar is used."
+msgstr ""
+"Den h&auml;r sidokolumnen anv&auml;nds p&aring; poster och arkiv som h&ouml;"
+"r till kategorin Press."
+
+#: functions.php:84
+#, fuzzy
+msgid "Pages Right Column"
+msgstr "H&ouml;gerkolumn f&ouml;r Press"
+
+#: functions.php:86 functions.php:97
+#, fuzzy
+msgid "On a Page this sidesbar is used."
+msgstr ""
+"Den h&auml;r sidokolumnen anv&auml;nds p&aring; poster och arkiv som h&ouml;"
+"r till kategorin Press."
+
+#: functions.php:95
+msgid "Home page"
+msgstr "Hem"
+
+#: functions.php:164
+#, php-format
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">skriver</span>"
+
+#: functions.php:167
+msgid "Your comment is awaiting moderation."
+msgstr "Din kommentar inv&auml;ntar moderering."
+
+#: functions.php:171
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s kl %2$s"
+
+#: functions.php:171
+msgid "(Edit)"
+msgstr "(&Auml;ndra)"
+
+#: header.php:12
+msgid "Startsida"
+msgstr "Startsida"
+
+#: header.php:29
+#, php-format
+msgid "Page %s"
+msgstr "Sida %s"
+
+#: index.php:21
+msgid "Not Found"
+msgstr "Hittades inte"
+
+#: index.php:24
+msgid ""
+"Sorry, there is nothing here. You might want to try and search for whatever "
+"it was you were looking for?"
+msgstr ""
+"Tyv&auml;rr, det finns ingenting h&auml;r. Du kanske vill f&ouml;rs&ouml;ka "
+"att s&ouml;ka efter vad det nu var du letade efter?"
+
+#: nav-bottom.php:6 nav-top.php:6
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> &Auml;ldre poster"
+
+#: nav-bottom.php:9 nav-top.php:9
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyare poster <span class=\"meta-nav\">&rarr;</span>"
+
+#: nav-breadcrumb.php:2
+msgid "Tillbaka till "
+msgstr "Tillbaka till"
+
+#: search.php:6
+#, php-format
+msgid "Search results for %s"
+msgstr "S&ouml;kresultat för %s"
+
+#: search.php:40
+msgid "Nothing Found"
+msgstr "Ingenting hittades"
+
+#: search.php:44
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+"Dessv&auml;rre hittade vi ingenting som passade dina s&ouml;k-kriterier. "
+"V&auml;nligen f&ouml;rs&ouml;k igen med andra s&ouml;kord."
+
+#: searchform.php:2
+msgid "Search"
+msgstr "S&ouml;k"
+
+#: sidebar-reports.php:61
+msgid "<h3 class=\"widget-title\">"
+msgstr "<h3 class=\"widget-title\">"
+
+#: sidebar-reports.php:65
+msgid "<h3 class=\"widget-title\">Rapporter</h3>"
+msgstr "<h3 class=\"widget-title\">Rapporter</h3>"
+
+#~ msgid "Category: "
+#~ msgstr "Kategori: "
+
+#~ msgid "Tag: "
+#~ msgstr "Tagg: "
+
+#~ msgid "Browsing: "
+#~ msgstr "L&auml;ser: "
+
+#~ msgid "Published "
+#~ msgstr "Publicerad"
+
+#~ msgid " and filed in "
+#~ msgstr " och kategoriserad som "
+
+#~ msgid "About"
+#~ msgstr "Om"
+
+#~ msgid "&rarr; Read more by "
+#~ msgstr "&rarr; L&auml;s mer av"
+
+#~ msgid "Leave a comment"
+#~ msgstr "L&auml;mna en kommentar"
+
+#~ msgid "1 comment"
+#~ msgstr "1 kommentar"
+
+#~ msgid "Read the whole thing &rarr;"
+#~ msgstr "L&auml;s vidare &rarr;"
+
+#~ msgid "Footer"
+#~ msgstr "Sidfot"
+
+#~ msgid "Four widgets will fit per row."
+#~ msgstr "Fyra widgets f&aring;r plats per rad."
+
+#~ msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span> F&ouml;rra"
+
+#~ msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "N&auml;sta <span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span> &Auml;ldre kommentarer"
+
+#~ msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Nyare kommentarer <span class=\"meta-nav\">&rarr;</span>"

@@ -1,0 +1,17 @@
+# CHANGELOG
+
+
+## 0.3 | 2012-01-05
+_x	version created
+_x	tweaks to footer
+_x	style tweaks
+
+## 0.2 | 2012-01-04
+_x	version created
+_x	mobile menu
+_x	wrapping up implementations
+_x	favicon and apple-touch-icon added
+
+## 0.1 | 2013-01-03
+_x	public version created and branched to live server
+_x	press sidebar added
