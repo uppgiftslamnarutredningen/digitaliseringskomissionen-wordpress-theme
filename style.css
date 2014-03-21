@@ -146,7 +146,7 @@ table {
 #home-header, .page-header {
 	width: 100%;
 	float: left;
-	background-color: #0073C1;
+	background-color: #0073C1; /* FIXME: configurable color, background-image? */
 	padding: 60px 0;
 	color: #fff;
 	text-align: center;

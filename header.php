@@ -1,6 +1,6 @@
 <?php 
 	if( isset( $_POST['agreedToCookieLaw'] ) ){
-		setcookie("cookieLaw", 'accepted', time()+7776000, "/", "digitaliseringskommissionen.se", 0, 1); 
+		setcookie("cookieLaw", 'accepted', time()+7776000, "/", false, 0, 1); 
 	}
 ?>
 <!DOCTYPE html>
@@ -44,9 +44,18 @@
 
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" />
+		<?php
+		if (is_file(get_template_directory()."/img/favicon.png")) { 
+		?>
+		<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" />
+		<?php
+		}
+		if (is_file(get_template_directory()."/img/apple-touch-icon.png")) { 
+		?>
 	    <link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon.png" />
-		
+		<?php
+		}
+		?>		
 		<!--[if lt IE 9]>
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-ie.css" />
 		<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js" type="text/javascript"></script>
@@ -69,7 +78,7 @@
 	?>
 		<div id="cookie" class="">
 			<form method="post">
-				<p>Digitaliseringskommissionens hemsida använder kakor för att samla in anonym statistik om besökare, såsom vilka webbläsare som används, vilket land de surfar från, osv.</p>
+				<p><?php bloginfo( 'name' ); ?> använder kakor för att samla in anonym statistik om besökare, såsom vilka webbläsare som används, vilket land de surfar från, osv.</p>
 				<input type="hidden" name="agreedToCookieLaw" id="agreedToCookieLaw" value="true" />
 				<input type="submit" value="Jag accepterar användandet av kakor" />
 			</form>
@@ -79,8 +88,8 @@
 		<header id="header-container" role="banner">
 			<div class="wrapper">
 				<h1 id="site-title">
-					<a href="<?php echo home_url(); ?>" title="Digitaliseringskommissionen">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/digikom_logo.png" alt="Digitaliseringskommissionens startsida" width="245" height="43" class="logo" />
+					<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>s startsida">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/digikom_logo.png" alt="<?php bloginfo( 'name' ); ?>" width="245" height="43" class="logo" />
 					</a>
 				</h1>
 				<nav id="site-nav" role="navigation">
